@@ -28,11 +28,11 @@ public class HotelReservation
 	 */
 	public Hotel getCheapestHotel(LocalDate startDate, LocalDate lastDate) 
 	{
-	        long daysBetween = ChronoUnit.DAYS.between(startDate, lastDate);
-	        int cheapRate;
-	        Hotel cheapest = Collections.min(hotels, Comparator.comparing(hotel -> hotel.regularWeekDayRate));
-	        cheapRate = (int) ((daysBetween + 1) * cheapest.regularWeekDayRate);
-	        System.out.println("Cheapest Hotel Name: " + cheapest.name + "\nTotal Rate: " + cheapRate);
-	        return cheapest;
-	    }
+	    long daysBetween = ChronoUnit.DAYS.between(startDate, lastDate);
+	    int cheapRate;
+	    Hotel cheapest = Collections.min(hotels, Comparator.comparing(hotel -> hotel.regularWeekDayRate));
+	    cheapRate = (int) ((daysBetween + 1) * cheapest.regularWeekDayRate);
+	    System.out.println("Cheapest Hotel Name: " + cheapest.name + "\nTotal Rate: " + cheapRate);
+	    return cheapest;
+	}
 }
