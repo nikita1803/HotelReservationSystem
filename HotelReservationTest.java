@@ -57,5 +57,16 @@ public class HotelReservationTest
 	        Hotel cheapestHotel = hotelReservation.getCheapestHotel(startDate, lastDate);
 	        Assert.assertEquals("LakeWood", cheapestHotel.name);
 	    }
+	    
+	    /*
+	     * This function is used to check the cheapest hotel along with weekend data set . 
+	     */
+	    @Test
+	    public void givenDateRange_ShouldPrintCheapestHotelsForRegularCostomer() {
+	        LocalDate startDate = LocalDate.of(2020, Month.SEPTEMBER, 11);
+	        LocalDate lastDate = LocalDate.of(2020, Month.SEPTEMBER, 12);
+	        hotelReservation.findCheapestRegularHotels(startDate, lastDate);
+	    }
+
 	    	 
 }

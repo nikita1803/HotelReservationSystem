@@ -5,6 +5,7 @@ public class Hotel
 	  public String name;
 	  public int regularWeekDayRate;
 	  public int regularWeekEndRate;
+	public int totalRegularRate;
 	  
 	  /*
 	   * Created a parameterize constructor of the class hotel .
