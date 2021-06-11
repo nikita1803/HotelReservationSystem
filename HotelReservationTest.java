@@ -1,6 +1,8 @@
 package com.hotelreservationsystem;
 
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +44,17 @@ public class HotelReservationTest
 	        Assert.assertTrue(HotelReservation.hotels.contains(bridgewood));
 	        Assert.assertTrue(HotelReservation.hotels.contains(ridgewood));
 	        HotelReservation.hotels.forEach(System.out::println);
+	    }
+	    
+	    /*
+	     * This method is used to check the cheapest hotel between the given data range .
+	     */
+	    @Test
+	    public void givenDateRange_ShouldReturnCheapestHotel() {
+	        LocalDate startDate = LocalDate.of(2020, Month.SEPTEMBER, 10);
+	        LocalDate lastDate = LocalDate.of(2020, Month.SEPTEMBER, 11);
+	        Hotel cheapestHotel = hotelReservation.getCheapestHotel(startDate, lastDate);
+	        Assert.assertEquals("LakeWood", cheapestHotel.name);
 	    }
 	    	 
 }
