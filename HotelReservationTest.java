@@ -15,11 +15,12 @@ public class HotelReservationTest
 	/*
 	 * Created a parameterized constructor of hotelReservation.
 	 * UC-3 : added the weekend rates for the hotels 
+	 * UC-5 : added ratings to each hotel
 	 */
 		HotelReservation hotelReservation = new HotelReservation();
-	    Hotel lakewood = new Hotel("LakeWood", 110,90);
-	    Hotel bridgewood = new Hotel("BridgeWood", 150,50);
-	    Hotel ridgewood = new Hotel("RidgeWood", 220,150);
+	    Hotel lakewood = new Hotel("LakeWood", 110,90,3);
+	    Hotel bridgewood = new Hotel("BridgeWood", 150,50,4);
+	    Hotel ridgewood = new Hotel("RidgeWood", 220,150,5);
 
 	    /*
 	     * setup is a function through which i can add the value in the array list.
